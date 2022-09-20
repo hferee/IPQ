@@ -38,7 +38,7 @@
 </div>
 
 <div class="doc">
-<a id="lab9"></a><h1 class="section">Overview: admissible rules in G4ip sequent calculus</h1>
+<a id="lab20"></a><h1 class="section">Overview: admissible rules in G4ip sequent calculus</h1>
 
 
 <div class="paragraph"> </div>
@@ -57,7 +57,7 @@ Logic (65):4.
 
 <div class="paragraph"> </div>
 
-<a id="lab10"></a><h1 class="section">Weakening</h1>
+<a id="lab21"></a><h1 class="section">Weakening</h1>
 
 <div class="paragraph"> </div>
 
@@ -106,7 +106,7 @@ Logic (65):4.
 </div>
 
 <div class="doc">
-<a id="lab11"></a><h1 class="section">Inversion rules</h1>
+<a id="lab22"></a><h1 class="section">Inversion rules</h1>
 
 <div class="paragraph"> </div>
 
@@ -306,8 +306,8 @@ This is Lemma 3.2 in (Dyckhoff &amp; Negri 2000).
 <div class="code">
 <span class="id" title="keyword">Theorem</span> <a id="generalised_axiom" class="idref" href="#generalised_axiom"><span class="id" title="lemma">generalised_axiom</span></a> <a id="e9496c2a50f70ac86950787b66328346" class="idref" href="#e9496c2a50f70ac86950787b66328346"><span class="id" title="binder">Γ</span></a> <a id="b03f05c6d4fe64a9f8aa13afac2780cc" class="idref" href="#b03f05c6d4fe64a9f8aa13afac2780cc"><span class="id" title="binder">φ</span></a> : <a class="idref" href="Pqf.SequentProps.html#e9496c2a50f70ac86950787b66328346"><span class="id" title="variable">Γ</span></a><a class="idref" href="Pqf.Environments.html#71ca1960dd16f5a2fd2bf72245ca13b9"><span class="id" title="notation">•</span></a><a class="idref" href="Pqf.SequentProps.html#b03f05c6d4fe64a9f8aa13afac2780cc"><span class="id" title="variable">φ</span></a> <a class="idref" href="Pqf.Sequents.html#417d4f8793ef9552198c889adf95d0f2"><span class="id" title="notation">⊢</span></a> <a class="idref" href="Pqf.SequentProps.html#b03f05c6d4fe64a9f8aa13afac2780cc"><span class="id" title="variable">φ</span></a>.<br/>
 <span class="id" title="keyword">Proof</span> <span class="id" title="keyword">with</span> (<span class="id" title="tactic">auto</span> <span class="id" title="keyword">with</span> <span class="id" title="var">proof</span>).<br/>
-<span class="id" title="var">remember</span> (<a class="idref" href="Pqf.Environments.html#weight"><span class="id" title="definition">weight</span></a> φ) <span class="id" title="keyword">as</span> <span class="id" title="var">w</span>.<br/>
-<span class="id" title="tactic">assert</span>(<span class="id" title="var">Hle</span> : <a class="idref" href="Pqf.Environments.html#weight"><span class="id" title="definition">weight</span></a> φ <a class="idref" href="http://coq.inria.fr/distrib/V8.15.1/stdlib//Coq.Unicode.Utf8.html#3ccab6e0e5cec5d8305913b11c2aa678"><span class="id" title="notation">≤</span></a> <span class="id" title="var">w</span>) <span class="id" title="tactic">by</span> <span class="id" title="var">lia</span>.<br/>
+<span class="id" title="var">remember</span> (<a class="idref" href="Pqf.Formulas.html#weight"><span class="id" title="definition">weight</span></a> φ) <span class="id" title="keyword">as</span> <span class="id" title="var">w</span>.<br/>
+<span class="id" title="tactic">assert</span>(<span class="id" title="var">Hle</span> : <a class="idref" href="Pqf.Formulas.html#weight"><span class="id" title="definition">weight</span></a> φ <a class="idref" href="http://coq.inria.fr/distrib/V8.15.1/stdlib//Coq.Unicode.Utf8.html#3ccab6e0e5cec5d8305913b11c2aa678"><span class="id" title="notation">≤</span></a> <span class="id" title="var">w</span>) <span class="id" title="tactic">by</span> <span class="id" title="var">lia</span>.<br/>
 <span class="id" title="tactic">clear</span> <span class="id" title="var">Heqw</span>. <span class="id" title="var">revert</span> <span class="id" title="var">Γ</span> φ <span class="id" title="var">Hle</span>.<br/>
 <span class="id" title="tactic">induction</span> <span class="id" title="var">w</span>; <span class="id" title="tactic">intros</span> <span class="id" title="var">Γ</span> φ <span class="id" title="var">Hle</span>.<br/>
 - <span class="id" title="tactic">destruct</span> φ; <span class="id" title="tactic">simpl</span> <span class="id" title="tactic">in</span> <span class="id" title="var">Hle</span>; <span class="id" title="var">lia</span>.<br/>
@@ -387,7 +387,7 @@ We prove Lemma 4.1 of (Dyckhoff &amp; Negri 2000). This lemma shows that a
 </div>
 
 <div class="doc">
-<a id="lab12"></a><h1 class="section">Contraction</h1>
+<a id="lab23"></a><h1 class="section">Contraction</h1>
 
 
 <div class="paragraph"> </div>
@@ -481,8 +481,8 @@ We prove Lemma 4.1 of (Dyckhoff &amp; Negri 2000). This lemma shows that a
 <span class="id" title="tactic">assert</span>(<span class="id" title="var">Hin'</span> : ψ <span class="id" title="notation">∈</span> <span class="id" title="var">Γ0</span> <span class="id" title="notation">∖</span> <span class="id" title="notation">{[</span>ψ<span class="id" title="notation">]}</span>) <span class="id" title="tactic">by</span>(<span class="id" title="tactic">rewrite</span> &lt;- <span class="id" title="var">HeqΓ</span>; <span class="id" title="var">ms</span>).<br/>
 <span class="id" title="tactic">clear</span> <span class="id" title="var">Γ</span> <span class="id" title="var">HeqΓ</span> <span class="id" title="var">Heq0</span>. <span class="id" title="var">revert</span> <span class="id" title="var">Hp</span>.<br/>
 <span class="comment">(*&nbsp;by&nbsp;induction&nbsp;on&nbsp;the&nbsp;weight&nbsp;of&nbsp;ψ&nbsp;*)</span><br/>
-<span class="id" title="var">remember</span> (<a class="idref" href="Pqf.Environments.html#weight"><span class="id" title="definition">weight</span></a> ψ) <span class="id" title="keyword">as</span> <span class="id" title="var">w</span>.<br/>
-<span class="id" title="tactic">assert</span>(<span class="id" title="var">Hle</span> : <a class="idref" href="Pqf.Environments.html#weight"><span class="id" title="definition">weight</span></a> ψ <a class="idref" href="http://coq.inria.fr/distrib/V8.15.1/stdlib//Coq.Unicode.Utf8.html#3ccab6e0e5cec5d8305913b11c2aa678"><span class="id" title="notation">≤</span></a> <span class="id" title="var">w</span>) <span class="id" title="tactic">by</span> <span class="id" title="var">lia</span>.<br/>
+<span class="id" title="var">remember</span> (<a class="idref" href="Pqf.Formulas.html#weight"><span class="id" title="definition">weight</span></a> ψ) <span class="id" title="keyword">as</span> <span class="id" title="var">w</span>.<br/>
+<span class="id" title="tactic">assert</span>(<span class="id" title="var">Hle</span> : <a class="idref" href="Pqf.Formulas.html#weight"><span class="id" title="definition">weight</span></a> ψ <a class="idref" href="http://coq.inria.fr/distrib/V8.15.1/stdlib//Coq.Unicode.Utf8.html#3ccab6e0e5cec5d8305913b11c2aa678"><span class="id" title="notation">≤</span></a> <span class="id" title="var">w</span>) <span class="id" title="tactic">by</span> <span class="id" title="var">lia</span>.<br/>
 <span class="id" title="tactic">clear</span> <span class="id" title="var">Heqw</span>. <span class="id" title="var">revert</span> <span class="id" title="var">Γ0</span> ψ <span class="id" title="var">θ</span> <span class="id" title="var">Hle</span> <span class="id" title="var">Hin</span> <span class="id" title="var">Hin'</span>.<br/>
 <span class="id" title="tactic">induction</span> <span class="id" title="var">w</span>; <span class="id" title="tactic">intros</span> <span class="id" title="var">Γ</span> ψ <span class="id" title="var">θ</span> <span class="id" title="var">Hle</span> <span class="id" title="var">Hin</span> <span class="id" title="var">Hin'</span> <span class="id" title="var">Hp</span>; [<span class="id" title="tactic">destruct</span> ψ; <span class="id" title="tactic">simpl</span> <span class="id" title="tactic">in</span> <span class="id" title="var">Hle</span>; <span class="id" title="var">lia</span>|].<br/>
 <span class="comment">(*&nbsp;by&nbsp;induction&nbsp;on&nbsp;the&nbsp;height&nbsp;of&nbsp;the&nbsp;premise&nbsp;*)</span><br/>
@@ -581,7 +581,7 @@ We prove Lemma 4.1 of (Dyckhoff &amp; Negri 2000). This lemma shows that a
 </div>
 
 <div class="doc">
-<a id="lab13"></a><h1 class="section">Admissibility of LJ's implication left rule</h1>
+<a id="lab24"></a><h1 class="section">Admissibility of LJ's implication left rule</h1>
 
 <div class="paragraph"> </div>
 
@@ -606,8 +606,8 @@ We prove Lemma 4.1 of (Dyckhoff &amp; Negri 2000). This lemma shows that a
 <span class="id" title="tactic">assert</span> (<span class="id" title="var">Heq</span>: <span class="id" title="var">Γ</span> <span class="id" title="notation">≡</span> <span class="id" title="var">Γ0</span> <span class="id" title="notation">∖</span> <span class="id" title="notation">{[(</span>φ <a class="idref" href="Pqf.Formulas.html#bb8d9050f9df35c0476eae46ff96b3be"><span class="id" title="notation">→</span></a> ψ<span class="id" title="notation">)]}</span>) <span class="id" title="tactic">by</span> <span class="id" title="var">ms</span>.<br/>
 <span class="id" title="tactic">assert</span>(<span class="id" title="var">Hin</span> : <span class="id" title="notation">(</span>φ <a class="idref" href="Pqf.Formulas.html#bb8d9050f9df35c0476eae46ff96b3be"><span class="id" title="notation">→</span></a> ψ<span class="id" title="notation">)</span> <span class="id" title="notation">∈</span> <span class="id" title="var">Γ0</span>) <span class="id" title="tactic">by</span> <span class="id" title="var">ms</span>. <span class="id" title="tactic">clear</span> <span class="id" title="var">HH</span>.<br/>
 <span class="id" title="var">rw</span> <span class="id" title="var">Heq</span> 1. <span class="id" title="tactic">clear</span> <span class="id" title="var">Heq</span> <span class="id" title="var">Γ</span>.<br/>
-<span class="id" title="var">remember</span> (<a class="idref" href="Pqf.Environments.html#weight"><span class="id" title="definition">weight</span></a> φ) <span class="id" title="keyword">as</span> <span class="id" title="var">w</span>.<br/>
-<span class="id" title="tactic">assert</span>(<span class="id" title="var">Hle</span> : <a class="idref" href="Pqf.Environments.html#weight"><span class="id" title="definition">weight</span></a> φ <a class="idref" href="http://coq.inria.fr/distrib/V8.15.1/stdlib//Coq.Unicode.Utf8.html#3ccab6e0e5cec5d8305913b11c2aa678"><span class="id" title="notation">≤</span></a> <span class="id" title="var">w</span>) <span class="id" title="tactic">by</span> <span class="id" title="var">lia</span>.<br/>
+<span class="id" title="var">remember</span> (<a class="idref" href="Pqf.Formulas.html#weight"><span class="id" title="definition">weight</span></a> φ) <span class="id" title="keyword">as</span> <span class="id" title="var">w</span>.<br/>
+<span class="id" title="tactic">assert</span>(<span class="id" title="var">Hle</span> : <a class="idref" href="Pqf.Formulas.html#weight"><span class="id" title="definition">weight</span></a> φ <a class="idref" href="http://coq.inria.fr/distrib/V8.15.1/stdlib//Coq.Unicode.Utf8.html#3ccab6e0e5cec5d8305913b11c2aa678"><span class="id" title="notation">≤</span></a> <span class="id" title="var">w</span>) <span class="id" title="tactic">by</span> <span class="id" title="var">lia</span>.<br/>
 <span class="id" title="tactic">clear</span> <span class="id" title="var">Heqw</span>. <span class="id" title="var">revert</span> <span class="id" title="var">Γ0</span> φ ψ <span class="id" title="var">θ</span> <span class="id" title="var">Hle</span> <span class="id" title="var">Hin</span> <span class="id" title="var">Hp</span>.<br/>
 <span class="id" title="tactic">induction</span> <span class="id" title="var">w</span>; <span class="id" title="tactic">intros</span>  <span class="id" title="var">Γ</span> φ ψ <span class="id" title="var">θ</span> <span class="id" title="var">Hle</span> <span class="id" title="var">Hin</span> <span class="id" title="var">Hp</span>;<br/>
 &nbsp;[<span class="id" title="tactic">destruct</span> φ; <span class="id" title="tactic">simpl</span> <span class="id" title="tactic">in</span> <span class="id" title="var">Hle</span>; <span class="id" title="var">lia</span>|].<br/>
@@ -649,7 +649,7 @@ We prove Lemma 4.1 of (Dyckhoff &amp; Negri 2000). This lemma shows that a
 </div>
 
 <div class="doc">
-<a id="lab14"></a><h1 class="section">Correctness of optimizations</h1>
+<a id="lab25"></a><h1 class="section">Correctness of optimizations</h1>
 
 
 <div class="paragraph"> </div>
@@ -834,7 +834,7 @@ To make the definitions of the propositional quantifiers that we extract from th
 </div>
 
 <div class="doc">
-<a id="lab15"></a><h1 class="section">Generalized rules</h1>
+<a id="lab26"></a><h1 class="section">Generalized rules</h1>
 
 
 <div class="paragraph"> </div>
@@ -847,7 +847,7 @@ conjunctions of various individual formulas.
 
 <div class="paragraph"> </div>
 
-<a id="lab16"></a><h2 class="section">Generalized OrL and its invertibility</h2>
+<a id="lab27"></a><h2 class="section">Generalized OrL and its invertibility</h2>
 
 </div>
 <div class="code">
@@ -883,7 +883,7 @@ conjunctions of various individual formulas.
 </div>
 
 <div class="doc">
-<a id="lab17"></a><h2 class="section">Generalized AndR</h2>
+<a id="lab28"></a><h2 class="section">Generalized AndR</h2>
 
 </div>
 <div class="code">
@@ -907,7 +907,7 @@ conjunctions of various individual formulas.
 </div>
 
 <div class="doc">
-<a id="lab18"></a><h2 class="section">Generalized invertibility of AndR</h2>
+<a id="lab29"></a><h2 class="section">Generalized invertibility of AndR</h2>
 
 </div>
 <div class="code">
@@ -935,7 +935,7 @@ conjunctions of various individual formulas.
 </div>
 
 <div class="doc">
-<a id="lab19"></a><h2 class="section">Generalized AndL</h2>
+<a id="lab30"></a><h2 class="section">Generalized AndL</h2>
 
 </div>
 <div class="code">
@@ -964,7 +964,7 @@ conjunctions of various individual formulas.
 </div>
 
 <div class="doc">
-<a id="lab20"></a><h2 class="section">Generalized OrR</h2>
+<a id="lab31"></a><h2 class="section">Generalized OrR</h2>
 
 </div>
 <div class="code">
